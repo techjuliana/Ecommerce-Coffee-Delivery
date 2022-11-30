@@ -1,5 +1,5 @@
 ## E-commerce Coffee Delivery 
-ReactJS + Styled Components e Route-DOM.
+# ReactJS + Styled Components e Rotas.
 <hr>
 
 ### Projeto Design HOME ⬇️
