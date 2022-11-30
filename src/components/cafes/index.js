@@ -1,6 +1,6 @@
 import { Container} from "./styled";
 
-export default function FormEntrega() {
+export default function Cafes() {
   return (
     <Container>
     </Container>

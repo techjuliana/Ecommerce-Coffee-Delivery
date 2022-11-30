@@ -10,6 +10,6 @@ export const tema = {
   titulo: "#272221",
   subtitulo: "#403938",
   text: "#57504D",
-  simbolo: "#8147F8",
-  pagamentohover: "#EBE5F9",
+  lilasEscuro: "#8147F8",
+  lilasClaro: "#EBE5F9",
 };

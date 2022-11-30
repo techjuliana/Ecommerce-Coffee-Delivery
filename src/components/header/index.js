@@ -1,19 +1,24 @@
-import { Container, Entrar, Logo, Github } from "./styled";
-import Ig from "./../../assets/ig.svg";
-import github from "./../../assets/github.svg";
+import { Container, Logo, Local, Carrinho } from "./styled";
+import { FaMapMarkerAlt, FaShoppingCart } from "react-icons/fa";
+import logo from "./../../assets/logo.svg";
 import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <Container>
-      <Logo src={Ig} alt="pais" />
-      <Link to="/"></Link>
+      <Link to="/">
+        <Logo src={logo} alt="pais" />
+      </Link>
 
-      <Entrar>
-        <a href="https://github.com/login">
-          <Github src={github} alt="" />
-          Entrar com GitHub
-        </a>
-      </Entrar>
+      <Local>
+        <FaMapMarkerAlt />
+        Local
+      </Local>
+
+      <Carrinho>
+        <Link to="/entregaPedido">
+          <FaShoppingCart />
+        </Link>
+      </Carrinho>
     </Container>
   );
 }
