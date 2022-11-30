@@ -2,9 +2,10 @@ import { Container } from "./styled";
 import men from "./../../assets/men.svg";
 import {
   FaMapMarkerAlt,
-  RiTimerFill,
-  MdOutlineAttachMoney,
+
 } from "react-icons/fa";
+import { RiTimerFill } from "react-icons/ri";
+import { MdOutlineAttachMoney } from "react-icons/md";
 export default function PedidoSucesso({ titulo, subtitulo }) {
   return (
     <Container>
@@ -13,7 +14,7 @@ export default function PedidoSucesso({ titulo, subtitulo }) {
       <FaMapMarkerAlt />
       <RiTimerFill />
       <MdOutlineAttachMoney />
-      <img src={men} alt="pais" />
+      <img src={men} alt="" />
     </Container>
   );
 }

@@ -9,41 +9,29 @@ export const Container = styled.div`
   padding: 2rem;
   justify-content: space-around;
   flex-direction: row;
-  border-bottom: 0.1rem solid ${(props) => props.theme.cinza};
   @media (max-width: 800px) {
     margin-left: auto;
     margin-right: auto;
   }
 `;
 
-export const Links = styled.div`
-  display: flex;
-  flex-direction: row;
-  h4 {
-    margin-top: 0.7rem;
-    padding: 0.9rem;
-    :hover {
-      padding: 0.3rem;
-      border-bottom: 0.1rem solid ${(props) => props.theme.amarelo};
-    }
-  }
-`;
+export const Conjunto = styled.div``;
 
 export const Logo = styled.img`
   margin-right: 3rem;
-  @media (max-width: 800px) {
-    margin-left: auto;
-    margin-right: auto;
-  }
+`;
+
+export const Entrega = styled.text`
+  margin-left: 0.5rem;
 `;
 
 export const Local = styled.button`
-  text-align: center;
-  color: ${(props) => props.theme.lilasEscuro};
-  background: ${(props) => props.theme.lilasClaro};
+  margin-right: 1rem;
+  color: ${(props) => props.theme.lilas2};
+  background: ${(props) => props.theme.lilas3};
 `;
 
 export const Carrinho = styled.button`
-  text-align: center;
-  background: ${(props) => props.theme.cinza};
+  color: ${(props) => props.theme.laranja1};
+  background: ${(props) => props.theme.laranja3};
 `;

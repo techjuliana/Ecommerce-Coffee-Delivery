@@ -15,7 +15,8 @@ export const GlobalStyles = createGlobalStyle`
  }
 
  button{
-  border-radius: 1rem;
+  padding:0.7rem;
+  border-radius: 0.4rem;
   cursor: pointer;
  }
 
@@ -28,6 +29,4 @@ export const GlobalStyles = createGlobalStyle`
   text-decoration:none;
   color:inherit;
 }
-
-
 `;
