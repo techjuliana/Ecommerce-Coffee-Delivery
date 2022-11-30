@@ -1,6 +1,8 @@
-## E-commerce Coffee Delivery 
-# ReactJS + Styled Components e Rotas.
-<hr>
+<h1 align="center">
+E-commerce Coffee Delivery
+
+<h3 align="center">
+ReactJS + Styled Components e Rotas.
 
 ### Projeto Design HOME ⬇️
 ![image](https://raw.githubusercontent.com/techjuliana/Ecommerce-Coffee-Delivery/main/design/home.png)
