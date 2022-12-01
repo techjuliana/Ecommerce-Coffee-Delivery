@@ -7,11 +7,13 @@ export const GlobalStyles = createGlobalStyle`
   height: 100vh;
   background: ${(props) => props.theme.body};
   font-family: 'Roboto', sans-serif;
+  font-weight: normal;
   color: ${(props) => props.theme.text};
  }
 
  h1{
   font-family: 'Baloo 2', cursive;
+  color: ${(props) => props.theme.titulo};
  }
 
  button{

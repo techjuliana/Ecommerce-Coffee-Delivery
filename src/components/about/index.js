@@ -1,22 +1,55 @@
-import { Container, Fundo} from "./styled";
-import coffee from './../../assets/coffee.png'
-import fundo from './../../assets/fundo.png'
-export default function About() {
+import {
+  ContainerTexto,
+  Fundo,
+  Lista,
+  Informacao,
+  Subtitulo,
+  Titulo,
+  Conjunto,
+  Coffee,
+  Container,
+} from "./styled";
+import coffee from "./../../assets/coffee.png";
+import fundo from "./../../assets/fundo.png";
+import { FaShoppingCart } from "react-icons/fa";
+import { RiTimerFill } from "react-icons/ri";
+import { GiCardboardBoxClosed, GiCoffeeCup } from "react-icons/gi";
+export default function About({
+  titulo,
+  subtitulo,
+  info1,
+  info2,
+  info3,
+  info4,
+}) {
   return (
     <Container>
-    <Fundo src={fundo} alt="" />
-    <div>
-    <h1>Encontre o café perfeito para qualquer hora do dia</h1>
-    <h2>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</h2>
-    <img src={coffee} alt="" />
-    </div>
-   
-    <div>
-    <h3>Compra simples e segura</h3>
-    <h3>Entrega rápida e rastreada</h3>
-    <h3>Embalagem mantém o café intacto</h3>
-    <h3>O café chega fresquinho até você</h3>
-    </div>
+      <Fundo src={fundo} alt="" />
+      <ContainerTexto>
+        <Conjunto>
+          <Titulo>{titulo}</Titulo>
+          <Subtitulo>{subtitulo}</Subtitulo>
+          <Lista>
+            <Informacao>
+              <FaShoppingCart className="circulo1" />
+              {info1}
+            </Informacao>
+            <Informacao>
+              <GiCardboardBoxClosed className="circulo3" />
+              {info3}
+            </Informacao>
+            <Informacao>
+              <RiTimerFill className="circulo2" />
+              {info2}
+            </Informacao>
+            <Informacao>
+              <GiCoffeeCup className="circulo4" />
+              {info4}
+            </Informacao>
+          </Lista>
+        </Conjunto>
+        <Coffee src={coffee} alt="" />
+      </ContainerTexto>
     </Container>
   );
 }

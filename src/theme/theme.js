@@ -7,7 +7,7 @@ export const tema = {
   lilas3: "#EBE5F9",
   // tag: "#F1EACA",
   laranja1: "#C47F18",
-  botaoFinalizar: "#DBAC2C",
+  laranja2: "#DBAC2C",
   laranja3: "#F1EACA",
   inputForm: "#EDEDED",
   titulo: "#272221",
