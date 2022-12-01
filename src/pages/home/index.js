@@ -14,7 +14,12 @@ export default function Home() {
         info3={"Embalagem mantém o café intacto"}
         info4={"O café chega fresquinho até você"}
       />
-      <Cafes />
+      <Cafes
+        titulo={"Nossos cafés"}
+        tag={"TRADICIONAL"}
+        cardTitulo={"Expresso Tradicional"}
+        sobre={"O tradicional café feito com água quente e grãos moídos"}
+      />
     </Container>
   );
 }

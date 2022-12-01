@@ -83,10 +83,14 @@ export const Conjunto = styled.div`
 
 export const Titulo = styled.h1`
   width: 25rem;
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 export const Informacao = styled.text`
   margin-bottom: 1rem;
+
 `;
 
 export const Subtitulo = styled.text`
@@ -95,4 +99,7 @@ export const Subtitulo = styled.text`
   margin-bottom: 2.5rem;
   margin-top: 1rem;
   color: ${(props) => props.theme.subtitulo};
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `;

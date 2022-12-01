@@ -5,9 +5,8 @@ export const Container = styled.div`
   justify-content: center;
   top: 0;
   left: 0;
-  width: 100%;
   padding: 2rem;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: row;
   @media (max-width: 800px) {
     margin-left: auto;

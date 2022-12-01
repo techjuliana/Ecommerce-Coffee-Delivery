@@ -5,13 +5,15 @@ export const GlobalStyles = createGlobalStyle`
  body {
   width: 100vw;
   height: 100vh;
+  display:flex;
+  justify-content:center;
   background: ${(props) => props.theme.body};
   font-family: 'Roboto', sans-serif;
   font-weight: normal;
   color: ${(props) => props.theme.text};
  }
 
- h1{
+ h1, h3{
   font-family: 'Baloo 2', cursive;
   color: ${(props) => props.theme.titulo};
  }

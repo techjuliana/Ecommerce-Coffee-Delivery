@@ -1,18 +1,39 @@
-import { Container } from "./styled";
+import {
+  Container,
+  Card,
+  Titulo,
+  TituloCard,
+  Tag,
+  Sobre,
+  Valor,
+  Quantidade,
+  Comprar,
+  Pag,
+  Grid,
+  Coffee,
+} from "./styled";
 
-export default function Cafes() {
+import tradicional from "./../../assets/coffees/tradicional.png";
+import { FaShoppingCart } from "react-icons/fa";
+export default function Cafes({ titulo, tag, cardTitulo, sobre }) {
   return (
     <Container>
-      <h1>Nossos cafés</h1>
-
-      <div>
-        <h3>Tradicional</h3>
-        <h2>Expresso Tradicional</h2>
-        <h4>O tradicional café feito com água quente e grãos moídos</h4>
-        <h1>Valor</h1>
-        <h5>quantidade</h5>
-        <button>Carrinho</button>
-      </div>
+      <Titulo>{titulo}</Titulo>
+      <Grid>
+        <Card>
+          <Coffee src={tradicional} alt="pais" />
+          <Tag>{tag}</Tag>
+          <TituloCard>{cardTitulo}</TituloCard>
+          <Sobre>{sobre}</Sobre>
+          <Pag>
+            <Valor>R$ 9,90</Valor>
+            <Quantidade>quantidade</Quantidade>
+            <Comprar>
+              <FaShoppingCart />
+            </Comprar>
+          </Pag>
+        </Card>
+      </Grid>
     </Container>
   );
 }
