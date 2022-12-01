@@ -13,9 +13,9 @@ export const ContainerTexto = styled.div`
     width: 25px;
     height: 25px;
     padding: 4px;
-   margin-right:0.6rem;
+    margin-right: 0.6rem;
     background: ${(props) => props.theme.lilas2};
-    color:${(props) => props.theme.body};
+    color: ${(props) => props.theme.body};
   }
 
   .circulo1 {
@@ -23,29 +23,29 @@ export const ContainerTexto = styled.div`
     width: 25px;
     height: 25px;
     padding: 5px;
-    margin-right:0.6rem;
+    margin-right: 0.6rem;
     background: ${(props) => props.theme.laranja1};
-    color:${(props) => props.theme.body};
+    color: ${(props) => props.theme.body};
   }
 
-  .circulo2{
+  .circulo2 {
     border-radius: 50%;
     width: 25px;
     height: 25px;
     padding: 4px;
-    margin-right:0.6rem;
+    margin-right: 0.6rem;
     background: ${(props) => props.theme.laranja2};
-    color:${(props) => props.theme.body};
+    color: ${(props) => props.theme.body};
   }
 
-  .circulo3{
+  .circulo3 {
     border-radius: 50%;
     width: 25px;
     height: 25px;
     padding: 4px;
-    margin-right:0.6rem;
+    margin-right: 0.6rem;
     background: ${(props) => props.theme.subtitulo};
-    color:${(props) => props.theme.body};
+    color: ${(props) => props.theme.body};
   }
 `;
 
@@ -70,7 +70,7 @@ export const Coffee = styled.img`
 
 export const Lista = styled.div`
   display: grid;
-  grid-template-columns: 400px 400px;
+  grid-template-columns: 290px 290px;
   @media (max-width: 800px) {
     grid-template-columns: 100%;
   }
@@ -81,13 +81,16 @@ export const Conjunto = styled.div`
   flex-direction: column;
 `;
 
-export const Titulo = styled.h1``;
+export const Titulo = styled.h1`
+  width: 25rem;
+`;
 
 export const Informacao = styled.text`
   margin-bottom: 1rem;
 `;
 
 export const Subtitulo = styled.text`
+  width: 33rem;
   font-size: 1.2rem;
   margin-bottom: 2.5rem;
   margin-top: 1rem;
