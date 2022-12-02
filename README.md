@@ -13,6 +13,9 @@ ReactJS + Styled Components e Rotas.
 ### Projeto Design PEDIDO CONFIRMADO ⬇️
 ![image](https://raw.githubusercontent.com/techjuliana/Ecommerce-Coffee-Delivery/main/design/pedido.png)
 
+<a href="https://www.figma.com/file/8ZhTx13C9z45yhgPFijU5z/Coffee-Delivery-(Copy)?node-id=217%3A511&t=Q20Qvg2k3Iyc1w4l-0">
+ <sub><b>FIGMA</b></sub></a> 
+
 ### `npm start`
 
 ## Tech Juliana
