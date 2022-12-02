@@ -1,7 +1,7 @@
 export const tema = {
   body: "#FAFAFA",
   card: "#F3F2F2",
-  unidades: "#E6E5E5",
+  cinza5: "#E6E5E5",
   lilas1: "#4C2995",
   lilas2: "#8147F8",
   lilas3: "#EBE5F9",
@@ -14,5 +14,6 @@ export const tema = {
   subtitulo: "#403938",
   text: "#57504D",
   cinza4: " #8D8686",
+  
  
 };

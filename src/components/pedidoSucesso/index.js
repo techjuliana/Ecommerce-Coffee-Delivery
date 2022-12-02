@@ -23,16 +23,15 @@ export default function PedidoSucesso() {
           <Lista>
             <Informacao>
               <FaMapMarkerAlt className="circulo1" />
-              Entrega em Rua João Daniel Martinelli, 102 Farrapos - Porto
-              Alegre, RS
+              Entrega em <span>Rua João Daniel Martinelli, 102 Farrapos</span>
             </Informacao>
             <Informacao>
-              <RiTimerFill className="circulo1" /> Previsão de entrega 20 min -
-              30 min
+              <RiTimerFill className="circulo2" /> Previsão de entrega{" "}
+              <span>20 min - 30 min</span>
             </Informacao>
             <Informacao>
-              <MdOutlineAttachMoney className="circulo1" />
-              Pagamento na entrega Cartão de Crédito
+              <MdOutlineAttachMoney className="circulo3" />
+              Pagamento na entrega <span>Cartão de Crédito</span>
             </Informacao>
           </Lista>
         </Conjunto>

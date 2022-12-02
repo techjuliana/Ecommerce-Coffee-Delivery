@@ -11,6 +11,7 @@ export const Card = styled.section`
 `;
 
 export const Grid = styled.div`
+  margin-top: 4rem;
   box-sizing: border-box;
   display: grid;
   justify-content: center;
@@ -23,7 +24,12 @@ export const Coffee = styled.img`
   top: -1.4rem;
 `;
 
-export const Titulo = styled.h1``;
+export const Titulo = styled.h1`
+@media (max-width: 800px) {
+  text-align: center;
+  }
+
+`;
 
 export const TituloCard = styled.h3`
   text-align: center;
@@ -31,8 +37,10 @@ export const TituloCard = styled.h3`
 `;
 
 export const Tag = styled.h6`
-  width: 5.4rem;
+  width: 6rem;
   padding: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 1rem;
   text-align: center;
   border-radius: 1rem;
@@ -49,9 +57,7 @@ export const Valor = styled.h1`
   color: ${(props) => props.theme.text};
 `;
 
-export const Quantidade = styled.div`
-
-`;
+export const Quantidade = styled.div``;
 
 export const Pag = styled.div`
   margin: 1.3rem;

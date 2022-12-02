@@ -8,17 +8,29 @@ export const ContainerTexto = styled.div`
     flex-direction: column;
     text-align: center;
   }
-  .circulo4 {
+
+  
+  .circulo1 {
     border-radius: 50%;
     width: 25px;
     height: 25px;
-    padding: 4px;
+    padding: 6px;
     margin-right: 0.6rem;
     background: ${(props) => props.theme.lilas2};
     color: ${(props) => props.theme.body};
   }
 
-  .circulo1 {
+  .circulo2 {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    margin-right: 0.6rem;
+    background: ${(props) => props.theme.laranja2};
+    color: ${(props) => props.theme.body};
+  }
+
+  .circulo3 {
     border-radius: 50%;
     width: 25px;
     height: 25px;
@@ -30,7 +42,11 @@ export const ContainerTexto = styled.div`
 `;
 
 export const Container = styled.div`
-  margin: 1rem;
+  margin: 2rem;
+  span{
+    color: ${(props) => props.theme.titulo};
+    font-weight:bold;
+  }
 `;
 
 export const Lista = styled.div`
