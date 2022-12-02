@@ -55,7 +55,7 @@ export const Container = styled.div`
 
 export const Fundo = styled.img`
   position: absolute;
-  top: 0;
+  top: 4rem;
   left: 0;
 `;
 
