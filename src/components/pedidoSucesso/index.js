@@ -35,7 +35,7 @@ export default function PedidoSucesso() {
               <span>{`${orders[lastPosition].district} - ${orders[lastPosition].city}, ${orders[lastPosition].estate}`}</span>
             </Informacao>
             <Informacao>
-              <RiTimerFill className="circulo2" /> Previsão de entrega{" "}
+              <RiTimerFill className="circulo2" /> Previsão de entrega
               <span>20 min - 30 min</span>
             </Informacao>
             <Informacao>

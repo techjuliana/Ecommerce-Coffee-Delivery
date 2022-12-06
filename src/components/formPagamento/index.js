@@ -30,7 +30,7 @@ export default function FormPagamento({ handleSubmit }) {
             <Subtitulo>
               Informe o endereço onde deseja receber seu pedido
             </Subtitulo>
-            <IMaskInput mask="0000-000" placeholder="CEP" />
+            <IMaskInput mask="00000-000" placeholder="CEP" />
             <input type="text" placeholder="Rua" />
             <InputContainer>
               <input type="number" placeholder="Número" />

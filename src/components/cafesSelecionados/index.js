@@ -1,43 +1,64 @@
-import { Carrinho, Container, Entrega, Titulo, Card, Remover} from "./styled";
-import {FaRegTrashAlt } from "react-icons/fa";
+import { Carrinho, Container, Entrega, Titulo, Card, Remover, CoffeeSale,CoffeeInfo, Container2, PriceInfo, PriceTag } from "./styled";
+import { FaRegTrashAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-export default function CafesSelecionados() {
+import { QuantidadeBotao } from "../quantidadeBotao";
+import cafe from "./../../assets/coffees/americano.png"
+export default function CafesSelecionados({ valor, coffeeAmount, addOne, removeOne}) {
+  
   return (
     <Container>
-     
-     <Titulo>Cafes Selecionados</Titulo>
-        <Card>
-        <div>
-           <text>nome cafe </text>
-           <text>R$</text>
-           </div>
-           <div>
-           <text>quantidade</text>
-           <Remover>
-           <FaRegTrashAlt className="roxo"/>
-          REMOVER
-           </Remover>
-           </div>
-           <div className="card">
-           <div>
-           <h6>Total de itens</h6>
-           <h6>R$</h6>
-           </div>
-            <div>
-            <h6>Entrega valor fixo</h6>
-            <h6>R$</h6>
-            </div>
-            <div>
-              <h6>Total</h6>
-              <h6>R$</h6>
-            </div>
-           </div>
-           <Carrinho>
-           <Link to="/pedidoConfirmado">
-           <Entrega>CONFIRMAR PEDIDO</Entrega>
+      <Titulo>Cafes Selecionados</Titulo>
+      <Card>
+      <Container2>
+      <img src={cafe} alt="" />
+      <div>
+        <CoffeeInfo>
+          <span>Cafe</span>
+          <span>
+            R$<span>{`${valor},00`}</span>
+          </span>
+        </CoffeeInfo>
+        <CoffeeSale>
+        <QuantidadeBotao
+             amount={coffeeAmount}
+             addOne={addOne}
+             removeOne={removeOne}
+          />
+          <Remover>
+            <FaRegTrashAlt className="roxo" 
+              onClick={'handleRemoveCoffeeFromCart'}
+            />
+            REMOVER
+          </Remover>
+        </CoffeeSale>
+        </div>
+        </Container2>
+        <PriceInfo>
+          <PriceTag>
+            <h5>Total de itens</h5>
+            <span>
+              R$<span>{`${valor},00`}</span>
+            </span>
+          </PriceTag>
+          <PriceTag>
+            <h5>Entrega valor fixo</h5>
+            <span>
+              R$<span>{`${valor},00`}</span>
+            </span>
+          </PriceTag>
+          <PriceTag>
+            <h4>Total</h4>
+            <span>
+              R$<span>{`${valor},00`}</span>
+            </span>
+          </PriceTag>
+        </PriceInfo>
+        <Carrinho>
+          <Link to="/pedidoConfirmado">
+            <Entrega>CONFIRMAR PEDIDO</Entrega>
           </Link>
         </Carrinho>
-          </Card>
+      </Card>
     </Container>
   );
 }
