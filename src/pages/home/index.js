@@ -1,25 +1,24 @@
-import { Container } from "./styled";
+import { Container, Grid } from "./styled";
 import About from "./../../components/about";
 import Cafes from "../../components/cafes";
+import Dados from "../../dados";
 export default function Home() {
   return (
     <Container>
-      <About
-        titulo={"Encontre o café perfeito para qualquer hora do dia"}
-        subtitulo={
-          "Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora"
-        }
-        info1={"Compra simples e segura"}
-        info2={"Entrega rápida e rastreada"}
-        info3={"Embalagem mantém o café intacto"}
-        info4={"O café chega fresquinho até você"}
-      />
-      <Cafes
-        titulo={"Nossos cafés"}
-        tag={"TRADICIONAL"}
-        cardTitulo={"Expresso Tradicional"}
-        sobre={"O tradicional café feito com água quente e grãos moídos"}
-      />
+      <About />
+      <Grid>
+        {Dados?.map((item, index) => (
+          <div key={index}>
+            <Cafes
+              img={item.srcImg}
+              tag={item.tags}
+              valor={item.price}
+              cardTitulo={item.title}
+              sobre={item.description}
+            />
+          </div>
+        ))}
+      </Grid>
     </Container>
   );
 }

@@ -8,30 +8,39 @@ import {
   Card,
   TituloForm,
   Pagamento,
+  InputContainer,
 } from "./styled";
-import {
-  FaMapMarkerAlt,
-  FaRegMoneyBillAlt,
-} from "react-icons/fa";
+import { IMaskInput } from "react-imask";
+import { FaMapMarkerAlt, FaRegMoneyBillAlt } from "react-icons/fa";
 import { MdOutlineAttachMoney } from "react-icons/md";
 import { BsCreditCard2Back, BsBank } from "react-icons/bs";
 
 import CafesSelecionados from "../cafesSelecionados";
-export default function FormPagamento() {
+export default function FormPagamento({ handleSubmit }) {
   return (
     <Container>
       <ContainerTexto>
         <Conjunto>
           <Titulo>Complete seu pedido</Titulo>
-          <Card>
+          <Card onSubmit={handleSubmit} id="completeOrderForm">
             <TituloForm>
               <FaMapMarkerAlt className="laranja" />
               Endereço de Entrega
             </TituloForm>
             <Subtitulo>
-              {" "}
               Informe o endereço onde deseja receber seu pedido
             </Subtitulo>
+            <IMaskInput mask="0000-000" placeholder="CEP" />
+            <input type="text" placeholder="Rua" />
+            <InputContainer>
+              <input type="number" placeholder="Número" />
+              <input type="text" placeholder="Complemento" />
+            </InputContainer>
+            <InputContainer>
+              <input type="text" placeholder="Bairro" />
+              <input type="text" placeholder="Cidade" />
+              <IMaskInput mask="aa" type="text" placeholder="UF" />
+            </InputContainer>
           </Card>
           <Card>
             <TituloForm>
@@ -43,15 +52,27 @@ export default function FormPagamento() {
             </Subtitulo>
             <Lista>
               <Pagamento>
-                <BsCreditCard2Back className="roxo" />
+                <BsCreditCard2Back
+                  className="roxo"
+                  // selected={paymentPreference === "creditCard"}
+                  // onClick={() => handleSelectPaymentPreference("creditCard")}
+                />
                 CARTÃO DE CRÉDITO
               </Pagamento>
               <Pagamento>
-                <BsBank className="roxo" />
+                <BsBank
+                  className="roxo"
+                  // selected={paymentPreference === "debitCard"}
+                  // onClick={() => handleSelectPaymentPreference("debitCard")}
+                />
                 CARTÃO DE DÉBITO
               </Pagamento>
               <Pagamento>
-                <FaRegMoneyBillAlt className="roxo" />
+                <FaRegMoneyBillAlt
+                  className="roxo"
+                  // selected={paymentPreference === "money"}
+                  // onClick={() => handleSelectPaymentPreference("money")}
+                />
                 DINHEIRO
               </Pagamento>
             </Lista>

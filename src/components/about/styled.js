@@ -8,6 +8,7 @@ export const ContainerTexto = styled.div`
     flex-direction: column-reverse;
     text-align: center;
   }
+
   .circulo4 {
     border-radius: 50%;
     width: 25px;
@@ -90,7 +91,6 @@ export const Titulo = styled.h1`
 
 export const Informacao = styled.text`
   margin-bottom: 1rem;
-
 `;
 
 export const Subtitulo = styled.text`
@@ -101,5 +101,15 @@ export const Subtitulo = styled.text`
   color: ${(props) => props.theme.subtitulo};
   @media (max-width: 800px) {
     width: 100%;
+  }
+`;
+
+export const Titulo2 = styled.h1`
+  margin-top: 6rem;
+  display: flex;
+  justify-content: center;
+  width: 15rem;
+  @media (max-width: 800px) {
+    text-align: center;
   }
 `;
