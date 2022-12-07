@@ -16,13 +16,13 @@ import { MdOutlineAttachMoney } from "react-icons/md";
 import { BsCreditCard2Back, BsBank } from "react-icons/bs";
 
 import CafesSelecionados from "../cafesSelecionados";
-export default function FormPagamento({ handleSubmit }) {
+export default function FormPagamento({handleChangePaymentType } ) {
   return (
     <Container>
       <ContainerTexto>
         <Conjunto>
           <Titulo>Complete seu pedido</Titulo>
-          <Card onSubmit={handleSubmit} id="completeOrderForm">
+          <Card>
             <TituloForm>
               <FaMapMarkerAlt className="laranja" />
               Endereço de Entrega
@@ -54,6 +54,8 @@ export default function FormPagamento({ handleSubmit }) {
               <Pagamento>
                 <BsCreditCard2Back
                   className="roxo"
+                  type="button"
+                  onClick={() => handleChangePaymentType("Cartão de Crédito")}
                   // selected={paymentPreference === "creditCard"}
                   // onClick={() => handleSelectPaymentPreference("creditCard")}
                 />
@@ -64,12 +66,16 @@ export default function FormPagamento({ handleSubmit }) {
                   className="roxo"
                   // selected={paymentPreference === "debitCard"}
                   // onClick={() => handleSelectPaymentPreference("debitCard")}
+                  type="button"
+                  onClick={() => handleChangePaymentType("Cartão de Débito")}
                 />
                 CARTÃO DE DÉBITO
               </Pagamento>
               <Pagamento>
                 <FaRegMoneyBillAlt
                   className="roxo"
+                  type="button"
+                  onClick={() => handleChangePaymentType("Dinheiro")}
                   // selected={paymentPreference === "money"}
                   // onClick={() => handleSelectPaymentPreference("money")}
                 />

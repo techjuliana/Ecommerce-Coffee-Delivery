@@ -1,56 +1,44 @@
-import { Carrinho, Container, Entrega, Titulo, Card, Remover, CoffeeSale,CoffeeInfo, Container2, PriceInfo, PriceTag } from "./styled";
-import { FaRegTrashAlt } from "react-icons/fa";
+import {
+  Carrinho,
+  Container,
+  Entrega,
+  Titulo,
+  Card,
+  PriceInfo,
+  PriceTag,
+} from "./styled";
+
 import { Link } from "react-router-dom";
-import { QuantidadeBotao } from "../quantidadeBotao";
-import cafe from "./../../assets/coffees/americano.png"
-export default function CafesSelecionados({ valor, coffeeAmount, addOne, removeOne}) {
-  
+
+import Dados from "../../dados";
+import CafesPag from "../cafesPag";
+import { useDeliveryFee } from "../../hooks/useDeliveryFee";
+export default function CafesSelecionados({ valor }) {
+
+
+  const price = useDeliveryFee(Dados);
+
   return (
     <Container>
       <Titulo>Cafes Selecionados</Titulo>
       <Card>
-      <Container2>
-      <img src={cafe} alt="" />
-      <div>
-        <CoffeeInfo>
-          <span>Cafe</span>
-          <span>
-            R$<span>{`${valor},00`}</span>
-          </span>
-        </CoffeeInfo>
-        <CoffeeSale>
-        <QuantidadeBotao
-             amount={coffeeAmount}
-             addOne={addOne}
-             removeOne={removeOne}
-          />
-          <Remover>
-            <FaRegTrashAlt className="roxo" 
-              onClick={'handleRemoveCoffeeFromCart'}
-            />
-            REMOVER
-          </Remover>
-        </CoffeeSale>
-        </div>
-        </Container2>
+        {Dados?.map((item) => (
+          <CafesPag item={item} key={item.id} />
+        ))}
         <PriceInfo>
           <PriceTag>
             <h5>Total de itens</h5>
-            <span>
-              R$<span>{`${valor},00`}</span>
-            </span>
+
+            <span value={price?.subTotal}> R$ {`${valor},00`}</span>
           </PriceTag>
           <PriceTag>
             <h5>Entrega valor fixo</h5>
-            <span>
-              R$<span>{`${valor},00`}</span>
-            </span>
+
+            <span value={12.0}>R$ 12,00</span>
           </PriceTag>
           <PriceTag>
             <h4>Total</h4>
-            <span>
-              R$<span>{`${valor},00`}</span>
-            </span>
+            <span value={price?.total}> R$ {`${valor},00`}</span>
           </PriceTag>
         </PriceInfo>
         <Carrinho>

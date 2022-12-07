@@ -46,6 +46,7 @@ export const Container = styled.div`
   span{
     color: ${(props) => props.theme.titulo};
     font-weight:bold;
+    margin-left:10px;
   }
 `;
 

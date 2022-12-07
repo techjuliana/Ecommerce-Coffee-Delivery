@@ -11,14 +11,12 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { RiTimerFill } from "react-icons/ri";
 import { MdOutlineAttachMoney } from "react-icons/md";
 import { Informacao } from "../about/styled";
-// import { OrdersContext } from '../../providers/OrdersProvider';
-import { useContext } from 'react';
-import { toast } from 'react-toastify';
-export default function PedidoSucesso() {
-  const { orders } = useContext();
-  const lastPosition = orders.length - 1;
+import { useState } from "react";
 
-  toast.success('Pedido completado com sucesso!');
+export default function PedidoSucesso() {
+  const { order } = useState();
+  const address = order?.address;
+
   return (
     <Container>
       <ContainerTexto>
@@ -30,9 +28,8 @@ export default function PedidoSucesso() {
           <Lista>
             <Informacao>
               <FaMapMarkerAlt className="circulo1" />
-              Entrega em{" "}
-              <span>{`${orders[lastPosition].road}, ${orders[lastPosition].number}`}</span>{" "}
-              <span>{`${orders[lastPosition].district} - ${orders[lastPosition].city}, ${orders[lastPosition].estate}`}</span>
+              Entrega em
+              <span>{address?.street} {address?.number}</span>
             </Informacao>
             <Informacao>
               <RiTimerFill className="circulo2" /> Previsão de entrega
@@ -41,9 +38,7 @@ export default function PedidoSucesso() {
             <Informacao>
               <MdOutlineAttachMoney className="circulo3" />
               Pagamento na entrega
-              <span>
-                {/* {getPaymentPreference(orders[lastPosition].paymentPreference)} */}
-              </span>
+              <span>{order?.paymentType}</span>
             </Informacao>
           </Lista>
         </Conjunto>
