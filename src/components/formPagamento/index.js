@@ -9,6 +9,7 @@ import {
   TituloForm,
   Pagamento,
   InputContainer,
+  CardPag
 } from "./styled";
 import { IMaskInput } from "react-imask";
 import { FaMapMarkerAlt, FaRegMoneyBillAlt } from "react-icons/fa";
@@ -42,7 +43,7 @@ export default function FormPagamento({handleChangePaymentType } ) {
               <IMaskInput mask="aa" type="text" placeholder="UF" />
             </InputContainer>
           </Card>
-          <Card>
+          <CardPag>
             <TituloForm>
               <MdOutlineAttachMoney className="roxo" />
               Pagamento
@@ -82,7 +83,7 @@ export default function FormPagamento({handleChangePaymentType } ) {
                 DINHEIRO
               </Pagamento>
             </Lista>
-          </Card>
+          </CardPag>
         </Conjunto>
         <CafesSelecionados />
       </ContainerTexto>

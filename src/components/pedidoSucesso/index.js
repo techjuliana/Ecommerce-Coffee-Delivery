@@ -30,6 +30,7 @@ export default function PedidoSucesso() {
               <FaMapMarkerAlt className="circulo1" />
               Entrega em
               <span>{address?.street} {address?.number}</span>
+             
             </Informacao>
             <Informacao>
               <RiTimerFill className="circulo2" /> Previsão de entrega

@@ -34,7 +34,7 @@ export default function CafesSelecionados({ valor }) {
           <PriceTag>
             <h5>Entrega valor fixo</h5>
 
-            <span value={12.0}>R$ 12,00</span>
+            <span>R$ 12,00</span>
           </PriceTag>
           <PriceTag>
             <h4>Total</h4>

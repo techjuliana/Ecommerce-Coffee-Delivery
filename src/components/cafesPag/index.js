@@ -1,7 +1,21 @@
 import { QuantidadeBotao } from "../quantidadeBotao";
 import { Remover, CoffeeSale, CoffeeInfo, Container2 } from "./styled";
 import { FaRegTrashAlt } from "react-icons/fa";
-export default function CafesPag({ item, coffeeAmount, addOne, removeOne }) {
+import { useState } from "react";
+
+export default function CafesPag({ item }) {
+  const [coffeeAmount, setCoffeeAmount] = useState(0);
+  const addOne = () => {
+    if (coffeeAmount < 9) {
+      setCoffeeAmount((state) => state + 1);
+    }
+  };
+
+  const removeOne = () => {
+    if (coffeeAmount > 0) {
+      setCoffeeAmount((state) => state - 1);
+    }
+  };
   return (
     <Container2>
       <img src={item.srcImg} alt="" />
@@ -12,7 +26,7 @@ export default function CafesPag({ item, coffeeAmount, addOne, removeOne }) {
         </CoffeeInfo>
         <CoffeeSale>
           <QuantidadeBotao
-            amount={item.coffeeAmount}
+            amount={coffeeAmount}
             addOne={addOne}
             removeOne={removeOne}
           />

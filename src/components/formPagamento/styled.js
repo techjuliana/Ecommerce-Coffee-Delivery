@@ -23,13 +23,24 @@ export const Card = styled.form`
   margin-top: 1rem;
   padding: 2rem;
   width: 100%;
-  height: 100%;
+  height: 19rem;
   background: ${(props) => props.theme.card};
   input {
     border-radius: 5px;
     padding: 1rem;
     margin: 0.4rem;
     background: ${(props) => props.theme.cinza5};
+  }
+`;
+export const CardPag = styled.form`
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  padding: 2rem;
+  width: 100%;
+  height: 10rem;
+  background: ${(props) => props.theme.card};
+  @media (max-width: 800px) {
+    height: 20rem;
   }
 `;
 
@@ -39,6 +50,7 @@ export const Container = styled.div`
 
 export const Lista = styled.div`
   display: grid;
+  margin-top: 1rem;
   grid-template-columns: 200px 200px 200px;
   @media (max-width: 800px) {
     grid-template-columns: 100%;
